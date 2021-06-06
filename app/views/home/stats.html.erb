@@ -1,0 +1,12 @@
+<div class="container">
+	<h2>Analytics | <%= link_to "home", "/"%></h2>
+	<% @track_urls.each do |tu| %>
+			<div class="list-redirect_url w3-gray"><%= tu.redirect_url %></div>
+			<div class="list-url"><%= root_url + tu.url %></div>
+			<div class="list">Total Clicks - <%= tu.clicks %></div>
+			<div class="list">Top countries - <%= tu.country %></div>
+			<div class="list">Status - <%= tu.is_active? ? "Active" : "In-active" %></div>
+			<hr>
+	<% end %>
+	<%= will_paginate @track_urls %>
+</div>

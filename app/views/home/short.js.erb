@@ -1,0 +1,17 @@
+<% if @track_url.errors.any? %>
+	$("#results").html("")
+	$("#error").html("<ul><% @track_url.errors.full_messages.each do |message| %><li><%= message %></li><% end %></ul>")
+<% else %>
+	$("#url").val("")
+	$("#error").html("")
+	$("#results").html('<p class="">Here is your short url.</p><h4 id="copy_link" ><%=root_url + @track_url.url%></h4><div class="cpy-btn bg-color-orange c-pointer" onclick="copyToClipboard()">COPY URL!</div>')
+<% end %>
+
+function copyToClipboard() {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($('#copy_link').html()).select();
+  document.execCommand("copy");
+  $temp.remove();
+  alert("Url copied successfully!")
+}

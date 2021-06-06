@@ -1,0 +1,35 @@
+.container{
+	padding: 10px 20px 0px 20px;
+  overflow-wrap: break-word;
+}
+.list-redirect_url{
+	font-size: 25px;
+}
+.list-url{
+	font-size: 20px;
+}
+.list{
+	font-size: 18px;
+}
+.form{
+	padding: 30px;
+}
+#error{
+	color: red;
+}
+#results{
+	padding: 30px;
+}
+.form-input{
+	width: 40%;
+	margin-top: 10px;
+}
+.bg-color-orange{
+	background-color: orange;
+}
+
+.cpy-btn{
+	cursor: pointer;
+	padding: 10px;
+	width: 8%;
+}
